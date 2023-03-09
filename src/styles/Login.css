@@ -1,0 +1,136 @@
+:root {
+  --gris: #EADDFF;
+  --morado: #8A52EE;
+  --azulOscuro: #4A4458;
+  --MoradoFuerte: #6750A4;
+  --blanco: #fff;
+  --fuente: "Quicksand", sans-serif;
+}
+
+/*para usar el font de la letra*/
+body {
+  font-family: var(--fuente);
+  background-color: var(--azulOscuro);
+  height: 50vh; /*100% de tu pantalla*/
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 1150px;
+  width: 95%;
+}
+
+.image-formulario {
+  background-image: url("/assets/pexels-ekaterina-bolovtsova-6373206.jpg");
+  background-position: center center;
+  background-size: cover; /*Hace que la imagen se adapte al padre*/
+  height: 200px;
+  flex: 0 0 calc(60%);
+  position: relative;
+}
+
+.image-formulario::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(141,169,196,.5), rgba(19,64, 116, .5) );
+}
+
+/* responsive */
+@media (min-width: 768px) {
+  .image-formulario {
+    height: auto;
+    background-position: right;
+  }
+}
+
+@media (min-width) {
+    .image-formulario{
+        background-position: center;
+    }
+}
+
+@media (min-width: 768px) {
+  .contenedor-formulario {
+    display: flex;
+  }
+}
+
+.formulario {
+  padding: 50px;
+  background-color: var(--gris);
+}
+
+.texto-formulario h2,
+.input label,
+.password-olvidada a,
+.crear-cuenta a,
+.texto-formulario p {
+  color: var(--MoradoFuerte);
+}
+
+.texto-formulario h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.texto-formulario p {
+  font-size: 22px;
+  text-align: center;
+}
+
+.input label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.crear-cuenta{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.input input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input input[type="submit"] {
+  background-color: var(--MoradoFuerte);
+  color: var(--blanco);
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  margin-top: 40px;
+}
+
+/* Diseño del efecto del boton */
+.input input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--azulOscuro);
+}
+
+/* Para que respete el tamaño de todos los elementos */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+  
